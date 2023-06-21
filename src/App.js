@@ -1,21 +1,20 @@
 import { Container, Col, Row } from "react-bootstrap";
-import Dashboard from "./pages/dashboard/index";
 import { Provider } from "react-redux";
 import SideNavBar from "./components/Navbar";
+import Routing from "./Routing";
 import Headbar from "./components/Headbar";
-import AccountList from "./pages/accountlist/acccountlist";
-import AddAccount from "./pages/addaccount/addaccount";
-import RecordJournal from "./pages/recordjournal/recordjournal";
-import Example from "./pages/recordjournal/example";
+import { AccountList, AddAccount, RecordJournal, Login, Home } from "./pages";
 
 function App() {
   return (
     <>
+      <Routing />
       <SideNavBar />
       <Headbar />
       {/* <AccountList /> */}
       {/* <AddAccount /> */}
-      <RecordJournal />
+      {/* <RecordJournal /> */}
+      <Login />
       {/* <Example /> */}
     </>
   );

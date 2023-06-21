@@ -5,11 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "typeface-nunito-sans";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+import { Provider } from "react-redux";
+import store from "./redux";
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
